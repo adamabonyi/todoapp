@@ -1,0 +1,32 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "dev": "nodemon -e ts  --exec \"npm run start\"",
+    "start": "npm run build && node .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/ws": "^8.5.10",
+    "eslint": "^8.56.0",
+    "nodemon": "^3.0.3",
+    "prisma": "^5.8.1",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.5.0",
+    "@fastify/websocket": "^8.3.1",
+    "@prisma/client": "^5.8.1",
+    "fastify": "^4.25.2",
+    "mqemitter": "^5.0.0"
+  }
+}
