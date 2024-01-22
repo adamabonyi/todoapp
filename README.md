@@ -13,19 +13,19 @@ Completed:
 - [x] Set items as done\_\_
 - [x] Can filter through items
 - [x] Can add sub-tasks
-- [] \_Add cost/price for tasks (**partially**, client missing)
-- [] Sum of subtasks agregated to parent (**partially**, client missing)
+- [ ] \_Add cost/price for tasks (**partially**, client missing)
+- [ ] Sum of subtasks agregated to parent (**partially**, client missing)
 - [x] Infinite nested levels (what UI allows, but infinite in logic)
-- [] Rich text descriptions (**prepared**, client missing, "marked" npm library)
-- [] I as user can see cursor/selection of another-user (wanted to do it over websockets, send x,y coordinates with an animated mouse cursor, changes already propagate instantly, only selections would needed to be implemented)
-- [] multiple to-do lists (nothing, would expand structure of todo items and use query param to filter)
-- [] special items (nothing, to-do would have type and type-values json type)
-- [] keep editing list offline (nothing, PWA, store in local storage, store events, replay them once internet comes back online, or just save local state after online)
-- [] VR goggles (nothing, would try to use WebXR but displaying web is difficult, maybe try WebXR DOM Overlays, but its only experimental on some browsers)
-- [] Drag and drop (**partially**, just need to add DnD - did it many times in the past, updates for order change are prepared on client)
-- [] Drag and drop subtasks (**dtto**)
+- [ ] Rich text descriptions (**prepared**, client missing, "marked" npm library)
+- [ ] I as user can see cursor/selection of another-user (wanted to do it over websockets, send x,y coordinates with an animated mouse cursor, changes already propagate instantly, only selections would needed to be implemented)
+- [ ] multiple to-do lists (nothing, would expand structure of todo items and use query param to filter)
+- [ ] special items (nothing, to-do would have type and type-values json type)
+- [ ] keep editing list offline (nothing, PWA, store in local storage, store events, replay them once internet comes back online, or just save local state after online)
+- [ ] VR goggles (nothing, would try to use WebXR but displaying web is difficult, maybe try WebXR DOM Overlays, but its only experimental on some browsers)
+- [ ] Drag and drop (**partially**, just need to add DnD - did it many times in the past, updates for order change are prepared on client)
+- [ ] Drag and drop subtasks (**dtto**)
 - [x] Persisted when server restarts (it would be if deployed correctly, now it should, but its not perfect)
-- [] Locking items (nothing, but adding a lock property and propagating it to other clients should be easy with what I have)
+- [ ] Locking items (nothing, but adding a lock property and propagating it to other clients should be easy with what I have)
 
 ## Client
 
