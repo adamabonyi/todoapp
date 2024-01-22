@@ -10,7 +10,7 @@ Completed:
 
 - [x] **I as a user can create to-do items**
 - [x] **I as another user can collaborate in real-time with user**
-- [x] Set items as done\_\_
+- [x] Set items as done
 - [x] Can filter through items
 - [x] Can add sub-tasks
 - [ ] \_Add cost/price for tasks (**partially**, client missing)
@@ -24,7 +24,7 @@ Completed:
 - [ ] VR goggles (nothing, would try to use WebXR but displaying web is difficult, maybe try WebXR DOM Overlays, but its only experimental on some browsers)
 - [ ] Drag and drop (**partially**, just need to add DnD - did it many times in the past, updates for order change are prepared on client)
 - [ ] Drag and drop subtasks (**dtto**)
-- [x] Persisted when server restarts (it would be if deployed correctly, now it should, but its not perfect)
+- [x] Persisted when server restarts (it should, but its not perfect)
 - [ ] Locking items (nothing, but adding a lock property and propagating it to other clients should be easy with what I have)
 
 ## Client
