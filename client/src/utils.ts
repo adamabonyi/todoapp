@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Todo } from "./models/todo";
+import { PartialTodo } from "./store";
 
 export const usePrevious = <T>(value: T): T | undefined => {
   const ref = useRef<T>();
@@ -8,6 +9,24 @@ export const usePrevious = <T>(value: T): T | undefined => {
   });
   return ref.current;
 };
+
+const removeClientTodoFields = ({
+  id,
+  parentId,
+  title,
+  isDone,
+  order,
+  description,
+  weight,
+}: PartialTodo) => ({
+  id,
+  parentId,
+  title,
+  isDone,
+  order,
+  description,
+  weight,
+});
 
 export const compareStates = (
   prev: Record<Todo["id"], Todo>,
@@ -61,5 +80,9 @@ export const compareStates = (
   if (!newTodos?.length && !removeTodos?.length && !updateTodos?.length)
     return null;
 
-  return { newTodos, removeTodos, updateTodos };
+  return {
+    newTodos: newTodos.map(removeClientTodoFields),
+    removeTodos,
+    updateTodos: updateTodos,
+  };
 };

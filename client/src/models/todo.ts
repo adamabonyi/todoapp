@@ -8,5 +8,4 @@ export type Todo = {
   weight?: number;
 
   children?: Todo[]; // client only
-  updated?: string[]; // client only
 };

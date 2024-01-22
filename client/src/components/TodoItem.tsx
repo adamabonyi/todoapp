@@ -100,7 +100,7 @@ const TodoItem = ({
         )}
         <input
           name="title"
-          placeholder="...enter a new ToDo item"
+          placeholder="...enter a new ToDo item here"
           ref={ref}
           defaultValue={todo.title}
           className={classNames(
@@ -140,7 +140,7 @@ const TodoItem = ({
                 onClick={onExpand}
                 className=" p-2 mx-1 rounded-md font-bold"
               >
-                {isExpanded ? <ChevronUp /> : <ChevronDown />}
+                {isExpanded ? <ChevronDown /> : <ChevronUp />}
               </button>
             )}
             <button

@@ -27,6 +27,7 @@
     "@fastify/websocket": "^8.3.1",
     "@prisma/client": "^5.8.1",
     "fastify": "^4.25.2",
+    "fastify-graceful-shutdown": "^3.5.1",
     "mqemitter": "^5.0.0"
   }
 }

@@ -66,6 +66,8 @@ export const convertTodos = (todos: Todo[]): TodoState => {
   const result = clone.reduce<TodoState>((prev, cur) => {
     if (cur.parentId) {
       const parent = todoMap[cur.parentId];
+      if (!parent) return prev;
+
       if (!parent.children) {
         parent.children = [cur];
       } else {
@@ -168,7 +170,6 @@ const updateSiblingPosition = (todo: Todo, state: TodoState) => {
   todoList.sort((a, b) => (a?.order || 0) - (b?.order || 0));
   for (let i = 0; i < todoList.length; i++) {
     todoList[i].order = i < todo.order ? i : i + 1;
-    todoList[i].updated = ["order"];
   }
 };
 

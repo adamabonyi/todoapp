@@ -12,8 +12,7 @@ import { Todo } from "../models/todo";
 import { v4 } from "uuid";
 import { compareStates } from "../utils";
 import useWebSocket, { ReadyState } from "react-use-websocket";
-
-const WS_URL = "ws://localhost:8080/events";
+import { WS_URL } from "../variables";
 
 type SocketMessage = {
   meta: string;
@@ -188,7 +187,7 @@ const TodoList = ({ data }: Props) => {
 
       <div className="flex flex-row justify-between items-baseline">
         <input
-          placeholder="Search"
+          placeholder="Filter text here"
           onChange={onFilterChange}
           className="rounded-md py-2 px-2 my-2 mx-4 bg-slate-200 dark:bg-slate-700  dark:text-gray-200 dark:placeholder-gray-400 font-semibold"
         />

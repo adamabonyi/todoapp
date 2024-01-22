@@ -29,6 +29,7 @@ fastify.register(cors, (instance) => {
     callback(null, corsOptions);
   };
 });
+fastify.register(require('fastify-graceful-shutdown'));
 
 fastify.get('/', async (request, reply) => {
   const users = await prisma.user.findMany({});
@@ -94,7 +95,11 @@ fastify.register(async (fastify) => {
 
           if (newTodos?.length) {
             for (const n of newTodos) {
-              await prisma.todo.create({ data: n });
+              try {
+                await prisma.todo.create({ data: n });
+              } catch (e) {
+                console.error(e);
+              }
             }
           }
 
@@ -110,12 +115,16 @@ fastify.register(async (fastify) => {
 
           if (updateTodos?.length) {
             for (const u of updateTodos) {
-              await prisma.todo.update({
-                where: {
-                  id: u.id,
-                },
-                data: u,
-              });
+              try {
+                await prisma.todo.update({
+                  where: {
+                    id: u.id,
+                  },
+                  data: u,
+                });
+              } catch (e) {
+                console.error(e);
+              }
             }
           }
 
